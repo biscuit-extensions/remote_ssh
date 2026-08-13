@@ -1,0 +1,7 @@
+[extension]
+id = "remote_ssh"
+name = "Remote SSH"
+version = "0.1.0"
+description = "Manage SSH hosts, port tunnels, and remote workspace connections"
+author = "biscuit-extensions"
+icon = "icon.png"
