@@ -1,7 +1,25 @@
 [extension]
 id = "remote_ssh"
 name = "Remote SSH"
-version = "0.1.0"
-description = "Manage SSH hosts, port tunnels, and remote workspace connections"
-author = "biscuit-extensions"
+version = "0.2.0"
+description = "SSH host configuration parser, connection manager, and remote execution bridge"
+author = "tomlin7"
 icon = "icon.png"
+
+[dependencies]
+python = [
+    "paramiko>=3.4.0"
+]
+tools = [
+    "ssh"
+]
+
+[contributes]
+commands = [
+    { id = "remote_ssh.connect", title = "Remote SSH: Connect to Host" },
+    { id = "remote_ssh.add_host", title = "Remote SSH: Add New Host Configuration" },
+    { id = "remote_ssh.open_config", title = "Remote SSH: Open SSH Configuration" },
+    { id = "remote_ssh.test_connection", title = "Remote SSH: Test Host Connectivity" },
+    { id = "remote_ssh.port_forward", title = "Remote SSH: Start Port Forward Tunnel" },
+    { id = "remote_ssh.disconnect", title = "Remote SSH: Disconnect Active Session" }
+]
